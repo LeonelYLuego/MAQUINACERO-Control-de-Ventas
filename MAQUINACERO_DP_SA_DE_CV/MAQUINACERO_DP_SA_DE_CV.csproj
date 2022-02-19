@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16651C39-993B-49FE-A1ED-58E133B1CF6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MAQUINACERO_DP_SA_DE_CV</RootNamespace>
+    <AssemblyName>MAQUINACERO_DP_SA_DE_CV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Almacen\Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\Almacen.Designer.cs">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\CAlmacen.cs" />
+    <Compile Include="ClaseBase.cs" />
+    <Compile Include="Cliente\AgregarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\AgregarCliente.Designer.cs">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\CCliente.cs" />
+    <Compile Include="Cliente\DatosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\DatosCliente.Designer.cs">
+      <DependentUpon>DatosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Conector.cs" />
+    <Compile Include="Conexion\Consultas.cs" />
+    <Compile Include="EntradaAlmacen\Agregar_cotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaAlmacen\Agregar_cotizacion.Designer.cs">
+      <DependentUpon>Agregar_cotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaAlmacen\CCotizacion.cs" />
+    <Compile Include="EntradaAlmacen\Cotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaAlmacen\Cotizacion.Designer.cs">
+      <DependentUpon>Cotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaAlmacen\Cotizacion_almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaAlmacen\Cotizacion_almacen.Designer.cs">
+      <DependentUpon>Cotizacion_almacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Informe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\Informe.Designer.cs">
+      <DependentUpon>Informe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\Agregar_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Agregar_producto.Designer.cs">
+      <DependentUpon>Agregar_producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\Variable_agregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Variable_agregar.Designer.cs">
+      <DependentUpon>Variable_agregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\Variable_eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Variable_eliminar.Designer.cs">
+      <DependentUpon>Variable_eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Programa\Dirreciones archivo\DireccionArchivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programa\Dirreciones archivo\DireccionArchivo.Designer.cs">
+      <DependentUpon>DireccionArchivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programa\Pantalla_bloqueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programa\Pantalla_bloqueo.Designer.cs">
+      <DependentUpon>Pantalla_bloqueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programa\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programa\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalidaAlmacen\Cotización\CotizacioExtras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Cotización\CotizacioExtras.Designer.cs">
+      <DependentUpon>CotizacioExtras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Cotización\CotizacionSalida.cs" />
+    <Compile Include="SalidaAlmacen\Cotización\Documento.cs" />
+    <Compile Include="SalidaAlmacen\Cotización\Sal_cotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Cotización\Sal_cotizacion.Designer.cs">
+      <DependentUpon>Sal_cotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Cotización\Sal_cotizacion_agregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Cotización\Sal_cotizacion_agregar.Designer.cs">
+      <DependentUpon>Sal_cotizacion_agregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Cotización\Sal_cotizacion_almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Cotización\Sal_cotizacion_almacen.Designer.cs">
+      <DependentUpon>Sal_cotizacion_almacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Criterios\ModificarCriterio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Criterios\ModificarCriterio.Designer.cs">
+      <DependentUpon>ModificarCriterio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Dolar\ModificarDolar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Dolar\ModificarDolar.Designer.cs">
+      <DependentUpon>ModificarDolar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Hoja de control\CHoja.cs" />
+    <Compile Include="SalidaAlmacen\Hoja de control\DocumentoHojaControl.cs" />
+    <Compile Include="SalidaAlmacen\Hoja de control\HojaDeControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Hoja de control\HojaDeControl.Designer.cs">
+      <DependentUpon>HojaDeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Hoja de control\HojaDeControlExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Hoja de control\HojaDeControlExtra.Designer.cs">
+      <DependentUpon>HojaDeControlExtra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Precio Corte\Agregar_precio_corte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Precio Corte\Agregar_precio_corte.Designer.cs">
+      <DependentUpon>Agregar_precio_corte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Precio Corte\Clase precio corte.cs" />
+    <Compile Include="SalidaAlmacen\Precio Corte\Precio_corte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaAlmacen\Precio Corte\Precio_corte.Designer.cs">
+      <DependentUpon>Precio_corte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\AgregarUsuario.Designer.cs">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\CUsuarios.cs" />
+    <Compile Include="Usuarios\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Almacen\Almacen.resx">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\AgregarCliente.resx">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\DatosCliente.resx">
+      <DependentUpon>DatosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaAlmacen\Agregar_cotizacion.resx">
+      <DependentUpon>Agregar_cotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaAlmacen\Cotizacion.resx">
+      <DependentUpon>Cotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaAlmacen\Cotizacion_almacen.resx">
+      <DependentUpon>Cotizacion_almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaAlmacen\Entrada_material.resx" />
+    <EmbeddedResource Include="Informes\Informe.resx">
+      <DependentUpon>Informe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Agregar_producto.resx">
+      <DependentUpon>Agregar_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Variable_agregar.resx">
+      <DependentUpon>Variable_agregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Variable_eliminar.resx">
+      <DependentUpon>Variable_eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programa\Agregar_almacen.resx" />
+    <EmbeddedResource Include="Programa\Dirreciones archivo\DireccionArchivo.resx">
+      <DependentUpon>DireccionArchivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programa\Pantalla_bloqueo.resx">
+      <DependentUpon>Pantalla_bloqueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programa\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SalidaAlmacen\Cotización\CotizacioExtras.resx">
+      <DependentUpon>CotizacioExtras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaAlmacen\Cotización\Sal_cotizacion.resx">
+      <DependentUpon>Sal_cotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaAlmacen\Cotización\Sal_cotizacion_agregar.resx">
+      <DependentUpon>Sal_cotizacion_agregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaAlmacen\Cotización\Sal_cotizacion_almacen.resx">
+      <DependentUpon>Sal_cotizacion_almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaAlmacen\Criterios\ModificarCriterio.resx">
+      <DependentUpon>ModificarCriterio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaAlmacen\Dolar\ModificarDolar.resx">
+      <DependentUpon>ModificarDolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaAlmacen\Hoja de control\HojaDeControl.resx">
+      <DependentUpon>HojaDeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaAlmacen\Hoja de control\HojaDeControlExtra.resx">
+      <DependentUpon>HojaDeControlExtra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaAlmacen\Precio Corte\Agregar_precio_corte.resx">
+      <DependentUpon>Agregar_precio_corte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaAlmacen\Precio Corte\Precio_corte.resx">
+      <DependentUpon>Precio_corte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\MAQUINACERO_DP_SA_DE_CV.csproj.CoreCompileInputs.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icono Maquinacero.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
